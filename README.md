@@ -6,6 +6,17 @@ http://kosta.tech
 
 ## Links
 
+The front-end is deployed here:<br>
+
+
+The back-end is deployed here:<br>
+
+
+The front-end repository can be found here:<br>
+
+
+The back-end deployed repository can be found here:<br>
+
 ## Screenshot
 
 ## Technologies Used
