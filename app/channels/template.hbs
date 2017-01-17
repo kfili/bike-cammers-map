@@ -1,0 +1,9 @@
+<h2>Channels route</h2>
+{{#each model as |list|}}
+  {{listr-list/card list=list
+                    editList='editList'
+                    delete='deleteList'}}
+{{/each}}
+{{#link-to 'lists/new'}}
+  add a new channel
+{{/link-to}}
