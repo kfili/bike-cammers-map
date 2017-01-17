@@ -6,8 +6,8 @@ export default Ember.Component.extend({
   //   done: false
   // },
   classNames: ['listr'],
-  // classNameBindings: ['listDetailHidden'],
-  // listDetailHidden: false,
+  classNameBindings: ['listDetailHidden'],
+  listDetailHidden: true,
   actions: {
     toggleListDetail () {
       return this.toggleProperty('listDetailHidden');
