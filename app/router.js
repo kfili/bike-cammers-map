@@ -10,7 +10,9 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('channels', function() {});
+  this.route('channels', function() {
+    this.route('new');
+  });
   this.route('channels/new');
   this.route('channel', { path: 'channels/:channel_id'}, function() {
     this.route('edit');

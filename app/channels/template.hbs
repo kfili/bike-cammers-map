@@ -1,9 +1,15 @@
 <h2>Channels route</h2>
-{{#each model as |list|}}
-  {{listr-list/card list=list
-                    editList='editList'
-                    delete='deleteList'}}
-{{/each}}
-{{#link-to 'lists/new'}}
+
+{{#link-to 'channels/new'}}
   add a new channel
 {{/link-to}}
+
+{{!-- <form {{action 'createItem' on='submit'}}>
+  {{input placeholder='New Item'
+          value=newItem.content}}
+  <button class='btn btn-xs' type='submit'>create item</button>
+</form> --}}
+
+{{#each model as |channel|}}
+  {{listr-list channel=channel}}
+{{/each}}

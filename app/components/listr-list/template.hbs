@@ -1,14 +1,12 @@
-<h3 class="list-header" {{action 'toggleListDetail'}}>listr-list component: {{channel.title}}</h3>
+<h3 class="list-header" {{action 'toggleListDetail'}}>listr-list component: {{channel.city}}</h3>
+{{!-- #each listr-list component 'toggleListDetail' - so they are hidden from the beginning --}}
+
 <ol>
-  {{#each channel.items as |item|}}
-    {{listr-list/item item=item
+  Comment: listr-list trying to display each channel here:
+  {{#each channel.channels as |channel|}}
+
+    {{listr-list/item channel=channel
                       toggleDone='toggleItemDone'
                       delete='deleteItem'}}
   {{/each}}
 </ol>
-
-<form {{action 'createItem' on='submit'}}>
-  {{input placeholder='New Item'
-          value=newItem.content}}
-  <button class='btn btn-xs' type='submit'>create item</button>
-</form>

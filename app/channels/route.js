@@ -5,8 +5,8 @@ export default Ember.Route.extend({
     // return this.get('store').findAll('channel');
       return [
         {
-          city: 'Boston, MA, United States',
-          channels: [
+          city: 'Boston, MA, United States',  //item:
+          channels: [                         //title:
             { channel: 'Boston bike cam' },
             { channel: 'Fatbike rider' },
           ],
@@ -25,13 +25,22 @@ export default Ember.Route.extend({
         },
       ];
   },
-  actions: {
-      editChannel (channel) {
-      console.log('im in channels/route', channel);
-      this.transitionTo('channel/edit', channel);
-    },
-    deleteChannel (channel) {
-      channel.destroyRecord();
-    }
+  actions:{
+      createItem (){
+        console.log('inside createitem, item is ', this.get('item'));
+        console.log('inside createitem this.get(newItem) is ', this.get('newItem') );
+        // console.log('inside createitem ', );
+        let data = this.get('newItem');
+        data.list = this.get('list');
+        // this.get('newItem').set('list', this.get('list'));
+        this.sendAction('createItem', this.get('newItem'));
+      },
+      // editChannel (channel) {
+      //   console.log('im in channels/route', channel);
+      //   this.transitionTo('channel/edit', channel);
+      // },
+      // deleteChannel (channel) {
+      //   channel.destroyRecord();
+      // }
   }
 });

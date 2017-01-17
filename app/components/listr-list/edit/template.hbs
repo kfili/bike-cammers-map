@@ -1,0 +1,7 @@
+<h3>listr-list/edit component</h3>
+<form {{action 'save' on='submit'}}>
+  {{input placeholder='List Title'
+          value=list.title}}
+  <button type='submit' class='btn btn-xs'>Save</button>
+  <button {{action 'cancel'}} class='btn btn-xs btn-danger'>Cancel</button>
+</form>
