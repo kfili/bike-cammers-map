@@ -11,6 +11,7 @@ export default Ember.Route.extend({
     },
     cancelCreateChannel (channel) {
       channel.rollbackAttributes();
+      this.transitionTo('channels');
       console.log('inside channels/new/route cancel');
     },
   }

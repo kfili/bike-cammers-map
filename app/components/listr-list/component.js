@@ -8,6 +8,11 @@ export default Ember.Component.extend({
   classNames: ['listr'],
   classNameBindings: ['listDetailHidden'],
   listDetailHidden: true,
+  // isCity: Ember.computed('channel', 'channel.city'
+  //
+  // ),
+  sortedChannel: Ember.computed.sort('channel', 'sortDefinition'),
+  sortDefinition: ['city'],
   actions: {
     toggleListDetail () {
       return this.toggleProperty('listDetailHidden');
