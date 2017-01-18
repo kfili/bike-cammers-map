@@ -2,16 +2,16 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model () {
-    return this.get('store').createRecord('list', {});
+    return this.get('store').createRecord('channel', {});
   },
   actions: {
-    createList (list) {
-      console.log('inside lists/new/route createList');
-      list.save();
+    createChannel (channel) {
+      console.log('inside channels/new/route createChannel');
+      channel.save();
     },
-    cancelCreateList (list) {
-      list.rollbackAttributes();
-      console.log('inside lists/new/route cancel');
+    cancelCreateChannel (channel) {
+      channel.rollbackAttributes();
+      console.log('inside channels/new/route cancel');
     },
   }
 });

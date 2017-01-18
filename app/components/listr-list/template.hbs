@@ -2,8 +2,8 @@
 {{!-- #each listr-list component 'toggleListDetail' - so they are hidden from the beginning --}}
 
 <ol>
-  Comment: listr-list trying to display each channel here:
-  {{#each channel.channels as |channel|}}
+  listr-list/item is supposed to display each channel here:
+  {{#each channel as |channel|}}
 
     {{listr-list/item channel=channel
                       toggleDone='toggleItemDone'

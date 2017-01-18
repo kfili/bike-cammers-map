@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model (params) {
       console.log(params);
-      return this.get('store').findRecord('list', params.list_id);
+      return this.get('store').findRecord('channel', params.list_id);
     },
   actions: {
     saveList (list) {
