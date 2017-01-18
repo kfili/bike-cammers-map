@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'ga-wdi-boston.ember-auth',
+    modulePrefix: 'bike-cammers-map',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -49,7 +49,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/bike-cammers-map';
     ENV.locationType = 'hash';
+    ENV.apiHost = 'https://immense-anchorage-70603.herokuapp.com';
   }
 
   return ENV;
