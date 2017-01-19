@@ -8,14 +8,7 @@ http://kosta.tech
 The front-end is deployed here:<br>
 https://kfili.github.io/bike-cammers-map
 
-The back-end is deployed here:<br>
-https://immense-anchorage-70603.herokuapp.com
-
-The front-end repository can be found here:<br>
-https://github.com/kfili/bike-cammers-map
-
-The back-end repository can be found here:<br>
-https://github.com/kfili/bike-cammers-map-api
+w
 
 ## Technologies Used
 

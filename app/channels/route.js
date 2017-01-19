@@ -4,7 +4,6 @@ export default Ember.Route.extend({
   model () {
     return this.get('store').findAll('channel');
     // return this.get('store').findRecord('channel', params.list_id);
-
   },
   actions:{
       createItem (){
