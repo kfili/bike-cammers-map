@@ -16,8 +16,9 @@ export default Ember.Component.extend({
       console.log('Youre inside listr-list/component in editList, this.get(channel) is ', this.get('channel'));
       this.sendAction('editChannel', this.get('channel'));
     },
-    // delete (channel) {
-    //   this.sendAction('deleteChannel', channel);
-    // },
+    delete () {
+      console.log('in listr-list/route in deleteChannel, channel is', this.get('channel'));
+      this.sendAction('delete', this.get('channel'));
+    },
   },
 });

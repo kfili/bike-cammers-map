@@ -19,7 +19,8 @@ export default Ember.Route.extend({
         console.log('im in editChannel, in channels/route channel is', channel);
         this.transitionTo('channel/edit', channel);
       },
-      deleteChannel (channel) {
+      delete (channel) {
+        console.log('in channels/route in deleteChannel, channel is', channel);
         channel.destroyRecord();
       }
   }
