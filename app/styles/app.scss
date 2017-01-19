@@ -4,3 +4,36 @@
 @import 'mixins';
 
 @import 'listr';
+
+* {
+  font-family: Helvetica;
+  font: Helvetica;
+  color: white;
+}
+
+.white {
+  text-align: center;
+  font-size: 14pt;
+}
+
+.col-md-8 {
+  background-color: rgba(255,255,255,0.7);
+  padding: 50px;
+}
+
+.pull-right {
+  color: red;
+}
+
+body {
+ // margin: 500px;
+ background-image: url(https://images.pexels.com/photos/109920/pexels-photo-109920.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb);
+ // background-size: 1440px 800px;
+ background-repeat: no-repeat;
+ background-size:100% auto;
+ // width: auto;
+ // height: 150%;
+ // display: compact;
+ // font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+ // z-index: -1; position:relative;
+}

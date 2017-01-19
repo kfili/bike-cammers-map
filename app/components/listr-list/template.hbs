@@ -1,12 +1,19 @@
-<h3 class="list-header" {{action 'toggleListDetail'}}>listr-list component: {{channel.city}}</h3>
+<a href="{{channel.url}}">
+    <h4 class="list-header" target="_blank">{{channel.title}}</h4>
+    {{channel.city}}, {{channel.state}}
+</a>
+<button class='btn btn-xs' {{action 'editChannel'}}>edit</button>
+{{!-- <button class='btn btn-xs btn-danger' {{action 'delete'}}>delete</button> --}}
+
+
 {{!-- #each listr-list component 'toggleListDetail' - so they are hidden from the beginning --}}
+{{!-- {{action 'toggleListDetail'}} --}}
 
-<ol>
-  Comment: listr-list trying to display each channel here:
-  {{#each channel.channels as |channel|}}
-
+{{!-- <ol>
+  listr-list/item is supposed to display each channel here:
+  {{#each sortedChannel as |channel|}}
     {{listr-list/item channel=channel
                       toggleDone='toggleItemDone'
                       delete='deleteItem'}}
   {{/each}}
-</ol>
+</ol> --}}

@@ -6,18 +6,21 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
+  // Auth
   this.route('sign-up');
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('channels', function() {
-    this.route('new');
-  });
+
+  // Channels
+  this.route('channels');
   this.route('channels/new');
-  this.route('channel', { path: 'channels/:channel_id'}, function() {
-    this.route('edit');
-  });
-  this.route('channel/edit', { path: 'channels/:channel_id/edit' });
+  this.route('channel', { path: 'channels/:id' });
+  this.route('channel/edit', { path: 'channels/:id/edit' });
 });
 
 export default Router;
+
+// this.route('channels', function() {
+//   this.route('new');
+// });

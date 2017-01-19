@@ -2,16 +2,21 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (params) {
-      console.log(params);
-      return this.get('store').findRecord('list', params.list_id);
+      console.log('in channel/edit/route, params are ', params);
+      let channel =  this.get('store').findRecord('channel', params._id);
+      console.log(channel.get('city'))
+
+      return channel;
     },
   actions: {
-    saveList (list) {
-      console.log('in list/edit route. list is', list);
-      list.save();
+    save (channel) {
+      console.log('in channel/edit, in saveChannel, channel is', channel);
+      channel.save();
+      this.transitionTo('channels');
     },
-    cancel () {
-      this.transitionTo('lists');
+    cancel (channel) {
+      channel.rollbackAttributes();
+      this.transitionTo('channels');
     },
     // editChannel (channel) {
     //   console.log('im in channels/route', channel);
