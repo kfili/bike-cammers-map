@@ -11,7 +11,7 @@ http://kosta.tech
 ## Technologies Used
 
 - Ember.js
-  - Explanation
+  -
 - Node.js
 -
 
@@ -22,6 +22,7 @@ http://kosta.tech
 ## User Stories
 
 ## Wireframes
+https://docs.google.com/drawings/d/1G4tqRYkAd1hpo-WnaF9VsMzERjjI-dLfFamI_njy7Jg/edit?usp=sharing
 
 ## Pitch Deck
 - Documentation of wireframes.

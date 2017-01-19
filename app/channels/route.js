@@ -16,12 +16,12 @@ export default Ember.Route.extend({
         // this.get('newItem').set('list', this.get('list'));
         this.sendAction('createItem', this.get('newItem'));
       },
-      // editChannel (channel) {
-      //   console.log('im in channels/route', channel);
-      //   this.transitionTo('channel/edit', channel);
-      // },
-      // deleteChannel (channel) {
-      //   channel.destroyRecord();
-      // }
+      editChannel (channel) {
+        console.log('im in editChannel, in channels/route channel is', channel);
+        this.transitionTo('channel/edit', channel);
+      },
+      deleteChannel (channel) {
+        channel.destroyRecord();
+      }
   }
 });

@@ -1,13 +1,13 @@
-<h3>listr-list/edit component</h3>
+<br>
 <form {{action 'save' on='submit'}}>
   {{input placeholder='channel name'
-          value=channel.title}}
+          value=channel.title}}<br>
   {{input placeholder='link to channel'
-          value=channel.url}}
+          value=channel.url}}<br>
   {{input placeholder='city where bike cammer is active'
-          value=channel.city}}
+          value=channel.city}}<br>
   {{input placeholder='country or state, country'
-          value=channel.state}}
-  <button type='submit' class='btn btn-xs'>Save</button>
-  <button {{action 'cancel'}} class='btn btn-xs btn-danger'>cancel</button>
+          value=channel.state}}<br>
+  <button class='btn btn-xs btn-danger' type='submit' class='btn btn-xs'>Save</button>
+  <button {{action 'cancel'}} class='btn btn-xs btn-danger'>back</button>
 </form>
