@@ -8,10 +8,10 @@ export default Ember.Component.extend({
   //   state: null,
   // },
 
-  // auth: Ember.inject.service(),
-  //
-  // user: Ember.computed.alias('auth.credentials.email'),
-  // isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
+  auth: Ember.inject.service(),
+
+  user: Ember.computed.alias('auth.credentials.email'),
+  isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   actions: {
     save () {
       // console.log('in listr-list/edit, in save()');

@@ -5,10 +5,23 @@ export default Ember.Route.extend({
     return this.get('store').createRecord('channel', {});
   },
   actions: {
+    willTransition () {
+      let store = this.get('store');
+      store.peekAll('channel').forEach(function (channel) {
+        if (channel.get('isNew') && channel.get('hasDirtyAttributes')) {
+          channel.rollbackAttributes();
+        }
+      });
+      return true;
+    },
     createChannel (channel) {
-      let _this = this;
-      channel.save().then(
-      _this.transitionTo('channels'));
+      channel.save()
+      .then(this.transitionTo('channels'))
+      .catch(() => {
+        channel.rollbackAttributes();
+        this.get('flashMessages')
+        .danger('Channel name already taken, or the channel link has already been posted.');
+      });
     },
     cancelCreateChannel (channel) {
       channel.rollbackAttributes();

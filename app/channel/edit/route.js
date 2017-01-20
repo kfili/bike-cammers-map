@@ -9,9 +9,18 @@ export default Ember.Route.extend({
       // console.log(channel.get('city'))
     },
   actions: {
+    willTransition () {
+      let store = this.get('store');
+      store.peekAll('channel').forEach(function (channel) {
+        if (channel.get('hasDirtyAttributes')) {
+          channel.rollbackAttributes();
+        }
+      });
+      return true;
+    },
     save (channel) {
       console.log('in channel/edit, in saveChannel, channel is', channel);
-      let _this = this;
+      // let _this = this;
       channel.save()
       .then(this.transitionTo('channels'))
       .catch(() => {
