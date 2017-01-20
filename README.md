@@ -1,20 +1,34 @@
-[![](image link)](https://generalassemb.ly/education/web-development-immersive)
-
 # Bike Cammers Map
 by Kosta Filiotis
-http://kosta.tech
 
 ## Links
 The front-end is deployed here:<br>
 https://kfili.github.io/bike-cammers-map
 
-w
+The back-end is deployed here:<br>
+https://immense-anchorage-70603.herokuapp.com
+
+The front-end repository can be found here:<br>
+https://github.com/kfili/bike-cammers-map
+
+The back-end repository can be found here:<br>
+https://github.com/kfili/bike-cammers-map-api
+
+## Screenshot
 
 
 ## Technologies Used
 
 - Ember.js
+  -
 - Node.js
+-
+
+## General Methodolgy
+
+## Installation of Dependancies
+
+## User Stories
 
 ## Wireframes
 https://docs.google.com/drawings/d/1G4tqRYkAd1hpo-WnaF9VsMzERjjI-dLfFamI_njy7Jg/edit?usp=sharing
@@ -37,13 +51,5 @@ https://docs.google.com/drawings/d/1G4tqRYkAd1hpo-WnaF9VsMzERjjI-dLfFamI_njy7Jg/
 
 ## Unsolved Problems / Major Hurdles
 - Add embeded youtube subscribe buttons
-- http://learnosm.org/en/beginner/
 - Add a map with markers showing where youtube channels are active.
 - drop down for city, country (geolocation)
-
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing.
