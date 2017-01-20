@@ -1,12 +1,16 @@
 <br>
 <form {{action 'save' on='submit'}}>
   {{input placeholder='channel name'
+          required='true'
           value=channel.title}}<br>
   {{input placeholder='link to channel'
+          required='true'
           value=channel.url}}<br>
   {{input placeholder='city where bike cammer is active'
+          required='true'
           value=channel.city}}<br>
   {{input placeholder='country or state, country'
+          required='true'
           value=channel.state}}<br>
   <button class='btn btn-xs btn-danger' type='submit' class='btn btn-xs'>Save</button>
   <button {{action 'cancel'}} class='btn btn-xs btn-danger'>back</button>

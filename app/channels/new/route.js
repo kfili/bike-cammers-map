@@ -6,8 +6,9 @@ export default Ember.Route.extend({
   },
   actions: {
     createChannel (channel) {
-      console.log('inside channels/new/route createChannel');
-      channel.save();
+      let _this = this;
+      channel.save().then(
+      _this.transitionTo('channels'));
     },
     cancelCreateChannel (channel) {
       channel.rollbackAttributes();
