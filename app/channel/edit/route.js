@@ -2,11 +2,17 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
+  // auth: Ember.inject.service(),
+  //
+  // user: Ember.computed.alias('auth.credentials.email'),
+  // isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
   model (params) {
-      console.log('in channel/edit/route, params are ', params);
+      console.log('NOW in channel/edit/route, params are ', params);
+      console.log('auth', this.get('auth.credentials.id'));
+
+      //  this.get('store').findRecord('channel', params._id);
       return this.get('store').findRecord('channel', params._id);
-      // console.log(channel.get('city'))
     },
   actions: {
     willTransition () {
