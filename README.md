@@ -1,14 +1,18 @@
-[![](image link)](https://generalassemb.ly/education/web-development-immersive)
-
 # Bike Cammers Map
 by Kosta Filiotis
-http://kosta.tech
 
 ## Links
 The front-end is deployed here:<br>
 https://kfili.github.io/bike-cammers-map
 
-w
+The back-end is deployed here:<br>
+https://immense-anchorage-70603.herokuapp.com
+
+The front-end repository can be found here:<br>
+https://github.com/kfili/bike-cammers-map
+
+The back-end repository can be found here:<br>
+https://github.com/kfili/bike-cammers-map-api
 
 ## Technologies Used
 
