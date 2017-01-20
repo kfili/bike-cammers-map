@@ -16,7 +16,7 @@ export default Ember.Component.extend({
     save () {
       // console.log('in listr-list/edit, in save()');
       console.log('in listr-edit/component this.get(channel)', this.get('channel'));
-      // this.get('channel').save();
+      // .then(islink(this.get('channel').url))
       this.sendAction('save', this.get('channel'));
     },
     cancel () {
