@@ -1,13 +1,11 @@
+{{new-btn}}
 
 
-{{#link-to 'channels/new'}}
-  <h3 class="pull-right">+ new channel</h3>
-{{/link-to}}
 
 {{#each model as |channel|}}
   {{listr-list  channel=channel
                 editChannel='editChannel'
-                delete='deleteChannel'}}
+                delete='delete'}}
 {{/each}}
 
 {{!-- <form {{action 'createItem' on='submit'}}>

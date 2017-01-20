@@ -5,5 +5,6 @@ export default DS.Model.extend({
   url: DS.attr('string'),
   city: DS.attr('string'),
   state: DS.attr('string'),
+  editable: DS.attr('boolean'),
   // items: DS.hasMany('item'),
 });

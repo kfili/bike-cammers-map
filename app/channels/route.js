@@ -4,7 +4,6 @@ export default Ember.Route.extend({
   model () {
     return this.get('store').findAll('channel');
     // return this.get('store').findRecord('channel', params.list_id);
-
   },
   actions:{
       createItem (){
@@ -20,7 +19,8 @@ export default Ember.Route.extend({
         console.log('im in editChannel, in channels/route channel is', channel);
         this.transitionTo('channel/edit', channel);
       },
-      deleteChannel (channel) {
+      delete (channel) {
+        console.log('in channels/route in deleteChannel, channel is', channel);
         channel.destroyRecord();
       }
   }
