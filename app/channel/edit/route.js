@@ -1,19 +1,18 @@
+// import the ember module's functions, objects, etc.
 import Ember from 'ember';
 
+// extending the ember route class, and exporting it from this file.
 export default Ember.Route.extend({
+
+  // create a 'flashMessages' property that looks up the relevant service.
   flashMessages: Ember.inject.service(),
-  // auth: Ember.inject.service(),
-  //
-  // user: Ember.computed.alias('auth.credentials.email'),
-  // isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
+  // the model hook handles information about the resource 'channels'.
   model (params) {
-      console.log('NOW in channel/edit/route, params are ', params);
-      console.log('auth', this.get('auth.credentials.id'));
+    return this.get('store').findRecord('channel', params._id);
+  },
 
-      //  this.get('store').findRecord('channel', params._id);
-      return this.get('store').findRecord('channel', params._id);
-    },
+  // the actions helper handles and sends events (e.g. clicks) to the app.
   actions: {
     willTransition () {
       let store = this.get('store');
@@ -25,8 +24,8 @@ export default Ember.Route.extend({
       return true;
     },
     save (channel) {
+      // console log left in as an example of how I debug code.
       console.log('in channel/edit, in saveChannel, channel is', channel);
-      // let _this = this;
       channel.save()
       .then(this.transitionTo('channels'))
       .catch(() => {
@@ -39,12 +38,8 @@ export default Ember.Route.extend({
       channel.rollbackAttributes();
       this.transitionTo('channels');
     },
-    // editChannel (channel) {
-    //   console.log('im in channels/route', channel);
-    //   this.transitionTo('channel/edit', channel);
-    // },
     deleteChannel (channel) {
       channel.destroyRecord();
-    }
+    },
   }
 });
