@@ -4,7 +4,7 @@
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
-        <li>{{#link-to "channels"}}Channels{{/link-to}}</li>
+        <li>{{#link-to "index"}}About{{/link-to}}</li>
       </ul>
       {{!-- <ul class="nav navbar-nav">
         <li>{{#link-to "https://www.reddit.com/r/bikecammers"}}Reddit Discussion{{/link-to}}</li>
@@ -26,8 +26,6 @@
     </div>
   </div>
 </nav>
-
-<h2 class="text-center">Bike Cammers</h2>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
