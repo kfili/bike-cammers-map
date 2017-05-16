@@ -27,7 +27,7 @@ export default Ember.Route.extend({
       // console log left in as an example of how I debug code.
       console.log('in channel/edit, in saveChannel, channel is', channel);
       channel.save()
-      .then(this.transitionTo('channels'))
+      .then(this.transitionTo('index'))
       .catch(() => {
         channel.rollbackAttributes();
         this.get('flashMessages')
@@ -36,7 +36,7 @@ export default Ember.Route.extend({
     },
     cancel (channel) {
       channel.rollbackAttributes();
-      this.transitionTo('channels');
+      this.transitionTo('index');
     },
     deleteChannel (channel) {
       channel.destroyRecord();
