@@ -1,8 +1,17 @@
-<p class="white">Welcome to Bike Cammers! Use this website to find youtube channels for bike
-  cammers in your city.<br> Click on the channels tab to begin. Sign up or Sign in
-  if you want to add channels to the list.</p>
+<br>
 
-  <div class="background-index">
-  </div>
+<h2 class="text-center">Welcome to Bike Cammers</h2>
+<p class="text-center">a list of people who video their bike rides</p>
+<br>
+<br>
 
-{{outlet}}
+{{new-btn}}
+<br>
+
+{{#each model as |channel|}}
+  {{listr-list  channel=channel
+                editChannel='editChannel'
+                delete='delete'}}
+{{/each}}
+
+<link rel="icon" href="/assets/favicon.ico">

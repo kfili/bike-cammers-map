@@ -17,13 +17,13 @@
 }
 
 .col-md-8 {
-  background-color: rgba(125,125,125,0.5);
+  background-color: rgba(0,0,0,0.8);
   padding: 50px;
   border-radius: 10px;
 }
 
-.pull-right {
-  color: red;
+.new-channel {
+  color: rgba(66,139,202,1);
 }
 
 // .list-header {
@@ -37,11 +37,11 @@
 body {
 background-color: black;
  // margin: 500px;
- background-image: url(https://i.imgur.com/3scHUx5.jpg);
+ background-image: url('http://i.imgur.com/yKFetHs.jpg');
  // background-size: 1440px 800px;
  background-repeat: no-repeat;
  background-size: cover;
- background-position: center;
+ background-position: top;
  // margin: 0;
  // padding: 0;
  // width: auto;

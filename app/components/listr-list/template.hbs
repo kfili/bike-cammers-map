@@ -3,8 +3,8 @@
     {{channel.city}}, {{channel.state}}
 </a>
 {{#if channel.editable}}
-<button class='btn btn-xs' {{action 'editChannel'}}>edit</button>
-<button class='btn btn-xs btn-danger' {{action 'delete'}}>delete</button>
+<button class='btn btn-xs btn-default pull-right' {{action 'editChannel'}}>edit</button>
+<button class='btn btn-xs btn-danger pull-right' {{action 'delete'}}>delete</button>
 {{/if}}
 
 {{!-- #each listr-list component 'toggleListDetail' - so they are hidden from the beginning --}}

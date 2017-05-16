@@ -16,7 +16,7 @@ export default Ember.Route.extend({
     },
     createChannel (channel) {
       channel.save()
-      .then(this.transitionTo('channels'))
+      .then(this.transitionTo('index'))
       .catch(() => {
         channel.rollbackAttributes();
         this.get('flashMessages')
@@ -25,7 +25,7 @@ export default Ember.Route.extend({
     },
     cancelCreateChannel (channel) {
       channel.rollbackAttributes();
-      this.transitionTo('channels');
+      this.transitionTo('index');
       console.log('inside channels/new/route cancel');
     },
   }

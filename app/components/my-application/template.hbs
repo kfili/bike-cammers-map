@@ -4,7 +4,13 @@
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
-        <li>{{#link-to "channels"}}Channels{{/link-to}}</li>
+        <li>
+          {{!-- {{#link-to "https://www.reddit.com/r/BikeCammers/"}} --}}
+          <a href="https://www.reddit.com/r/BikeCammers/" target="_blank">
+          Reddit
+          </a>
+          {{!-- {{/link-to}} --}}
+        </li>
       </ul>
       {{!-- <ul class="nav navbar-nav">
         <li>{{#link-to "https://www.reddit.com/r/bikecammers"}}Reddit Discussion{{/link-to}}</li>
@@ -26,8 +32,6 @@
     </div>
   </div>
 </nav>
-
-<h1>Bike Cammers</h1>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
