@@ -1,3 +1,12 @@
+{{#unless isAuthenticated}}
+  <p class="white">
+    Have a youtube channel with footage of your rides?
+    {{#link-to "sign-up"}}Sign up{{/link-to}}
+    or
+    {{#link-to "sign-in"}}sign in{{/link-to}}
+    to add it to the list! </p>
+{{/unless}}
+
 {{#if isAuthenticated}}
 {{#link-to 'channels/new'}}
   <button class="btn-md btn-primary center-block">add bike cam channel</button>
