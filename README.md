@@ -55,6 +55,18 @@ https://github.com/kfili/bike-cammers-map-api
 
 ```npm install && bower install```
 
+#### Re-Deployment:
+[Deployment guide](https://github.com/ga-wdi-boston/ember-deployment-guide)
+
+If getting the following error ```Updates were rejected because a pushed branch tip is behind its remote counterpart.```
+then try:<br>
+```git push origin `git subtree split --prefix dist gh-pages`:gh-pages --force```
+
+Note, previously tried:<br>
+```git push origin `git subtree split --prefix dist master`:gh-pages --force```
+
+
+
 ## User Stories
 
 - I am a viewer and I want to:
