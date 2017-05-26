@@ -6,47 +6,38 @@
 @import 'listr';
 
 * {
-  font-family: Helvetica;
-  font: Helvetica;
   color: white;
+  font: Helvetica;
+  font-family: Helvetica;
 }
 
 .white {
-  text-align: center;
   font-size: 14pt;
+  text-align: center;
 }
 
 .col-md-8 {
   background-color: rgba(0,0,0,0.8);
-  padding: 50px;
   border-radius: 10px;
+  padding: 50px;
 }
 
 .new-channel {
   color: rgba(66,139,202,1);
 }
 
-// .list-header {
-//   color: white;
-// }
-//
-// a {
-//   color: white;
-// }
-
 body {
-background-color: black;
- // margin: 500px;
- background-image: url('http://i.imgur.com/yKFetHs.jpg');
- // background-size: 1440px 800px;
- background-repeat: no-repeat;
- background-size: cover;
- background-position: top;
- // margin: 0;
- // padding: 0;
- // width: auto;
- height: auto;
- // display: compact;
- // font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
- // z-index: -1; position:relative;
+  background-color: black;
+  background-image: url('http://i.imgur.com/yKFetHs.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  // background-size: 1440px 800px;
+  // margin: 0;
+  // padding: 0;
+  // width: auto;
+  // display: compact;
+  // font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // z-index: -1; position:relative;
 }
